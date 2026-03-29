@@ -1,6 +1,6 @@
 class Solution {
     public int islandPerimeter(int[][] grid) {
-            			int perimeter = 0;
+        int perimeter = 0;
 		int rows = grid.length;
 		int cols = grid[0].length;
 
@@ -11,6 +11,7 @@ class Solution {
 					perimeter += 4;
 
 					// Sağ komşu ada hücresi varsa, iki kenar birbirini iptal eder
+                    // Sırayla sol üstten sağ alta doğru gidiyor satır satır. ondan dolayı sol komşuya bakmaya gerek kalmıyor.
 					if (j + 1 < cols && grid[i][j + 1] == 1) {
 						perimeter -= 2;
 					}
